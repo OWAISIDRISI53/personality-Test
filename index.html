@@ -100,16 +100,37 @@ position: absolute;
 
 
   <script>
+
+    
+    
 let img = document.getElementById('img');
 let btn = document.getElementById('btn');
+let input;
+let item ;
+let setI ;
+let demo = document.getElementById('demo')
+
+let na = localStorage.getItem('name')
+if (na != null) {
+  console.log(na);
+img.src  =`https://joeschmoe.io/api/v1/${na}` ;
+demo.innerHTML = na;
+} 
+else {
+  console.log('Null');
+}
+
 btn.addEventListener('click',my) ;
 
 function my(){
-  let input = document.getElementById('input').value;
+  input = document.getElementById('input').value;
   img.src  =`https://joeschmoe.io/api/v1/${input}` ;
+  console.log(input,item,setI);
+  setI = localStorage.setItem('name',`${input}`)
+  demo.innerHTML = input;
 }
-    
-    
+
+
   </script>
 </body>
 
