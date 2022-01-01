@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>personality Test</title>
+
+  
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 40px;
+  text-align: center;
+}
+
+.container {
+  height: 300px;
+  width: 90%;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 10px 30px;
+  background: linear-gradient(lightblue,grey);
+}
+
+img {
+  height: 150px;
+  display: block;
+  margin: 20px auto;
+}
+
+label,
+input {
+  margin-left: 10px;
+}
+
+input{
+  border: none;
+  padding: 10px;
+}
+
+button{
+  display: block;
+  padding: 10px 12px;
+  background: transparent;
+  border: 2px solid black;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+a{
+  text-decoration: none;
+  padding:10px 100px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  text-align: center;
+}
+  </style>
+</head>
+
+<body>
+  <h1>Online personality Test</h1>
+  <div class="container">
+    <img id="img" src="icon-programmer-14-removebg-preview.png" alt="personality">
+    <label for="name">Name :</label>
+    <input type="text" name="name" id="input" placeholder="Enter Name">
+    <button id="btn">Find personality</button>
+  </div>
+  <a href="mailto:idrisiowais05@gmail.com">Contact Us</a>
+
+  <script>
+let img = document.getElementById('img');
+let btn = document.getElementById('btn');
+btn.addEventListener('click',my) ;
+
+function my(){
+  let input = document.getElementById('input').value;
+  img.src  =`https://joeschmoe.io/api/v1/${input}` ;
+}
+    
+    
+  </script>
+</body>
+
+</html>
