@@ -63,7 +63,7 @@ button{
   border-radius: 15px;
 }
 
-a{
+#contact{
   text-decoration: none;
   padding:10px 100px;
   border-radius: 10px;
@@ -71,6 +71,25 @@ a{
   color: white;
   text-align: center;
 }
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 2%;
+  height: 70px;
+  width: 80%;
+  background: black;
+  color: white;
+  border-radius: 20px;
+}
+
+footer a i {
+  color: white;
+  margin:10px 26px;
+}
+
   </style>
 </head>
 
@@ -82,7 +101,18 @@ a{
     <input type="text" name="name" id="input" placeholder="Enter Name">
     <button id="btn">Find personality</button>
   </div>
-  <a href="mailto:idrisiowais05@gmail.com">Contact Us</a>
+  <a id="contact" href="mailto:idrisiowais05@gmail.com">Contact Us</a>
+  <footer>
+    <h3>@Owais Idrisi</h3>
+    <div class="icon">
+      <a href="https://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/owais_idrisi" target="_blank"> <i class="fa fa-instagram"></i></a>
+      <a href="https://www.twitter.com" target="_blank"> <i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/OWAISIDRISI53" target="_blank"> <i class="fa fa-github"></i></a>
+    </div>
+  </footer>
+
+
 
   <script>
 let img = document.getElementById('img');
